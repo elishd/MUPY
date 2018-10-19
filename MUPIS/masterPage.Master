@@ -1,0 +1,135 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="masterPage.master.vb" Inherits="MUPIS.masterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AGILSOFT </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- CSS -->
+    <link href="Content/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/plugins/toastmessage/resources/css/jquery.toastmessage.css" rel="stylesheet" />
+    <link href="Content/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="Content/tema/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/tema/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="Content/tema/css/skins/skin-black-light.min.css" rel="stylesheet" />
+    <link href="Content/plugins/datepicker/jquery.datetimepicker.min.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="Content/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .pantalla {
+            background-image: url('/Content/Imagenes/2.jpg');
+            background-repeat: repeat;
+            background-size: 100%;
+            text-align: center;
+        }
+
+        .contenedor {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            min-height: 600px;
+            width: 80%;
+            background-color: #fff;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: black;
+            overflow: auto;
+        }
+
+
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+            }
+
+            .menu li a {
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+                .menu li a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                .menu li a:hover:not(.active) {
+                    background-color: #555;
+                    color: white;
+                }
+    </style>
+
+</head>
+
+<body class="pantalla">
+    <br />
+    <br />
+    <div class="contenedor">
+        <section class="content-header bg-green">
+            <h1>GESTION DE MUPIS</h1>
+            <%--<ol class="breadcrumb">
+                <li><a href="/acerca_de.aspx"><i class="fa  fa-question"></i>Acerca de</a></li>
+            </ol>--%>
+        </section>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-4">
+
+                    <div class="menu text-xl-center">
+                        <div class="border-bottom">
+                            <h1 style="color: white"><strong>ILEDVIEW </strong></h1>
+                        </div>
+                        <ul style="text-align: left">
+                            <li><a class="active" href="#contact">Volver al menú principal </a></li>
+                            <li><a href="Registrar%20Medio.aspx">Registrar Medio</a></li>
+                            <li><a href="/mantenimiento.aspx">Registrar mantenimientos</a></li>
+                            <li><a href="/home.aspx">Ver ubicación de  Mupys </a></li>
+                            <li><a href="/mostrarMedioPantalla.aspx">Ver ubicación de Pantallas </a></li>                           
+                            <li><a href="/todosLosMantenimiento.aspx">Ver mantenimientos general</a></li>
+                            <li><a href="/lo.aspx">Cerrar Sección </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-8">
+                    <form id="form1" runat="server">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="Content/plugins/toastmessage/javascript/jquery.toastmessage.js"></script>
+    <script src="Content/plugins/select2/js/select2.full.min.js"></script>
+    <script src="Content/plugins/bootstrap/js/bootbox.min.js"></script>
+    <script src="Content/jfunciones.js"></script>
+    <script src="Content/tema/js/app.min.js"></script>
+    <script src="Content/plugins/bootstrap/js/bootstrap-modal-mult.js"></script>
+    <script src="Content/plugins/jQuery-Mask/jquery.mask.js"></script>
+    <script src="Content/plugins/dataformat/date.format.js"></script>
+    <script src="Content/jquery.inputmask.bundle.js"></script>
+    <script src="Content/plugins/datepicker/jquery.datetimepicker.full.min.js"></script>
+</body>
+</html>

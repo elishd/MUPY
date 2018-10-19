@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4759A4F4-3CBF-4003-A29F-FC435F08BEF1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MUPIS</RootNamespace>
+    <AssemblyName>MUPIS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MUPIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MUPIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Gmap.net">
+      <HintPath>..\packages\GMap.Net.1.0.1\lib\Gmap.net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="acerca_de.aspx" />
+    <Content Include="bin\MUPIS.dll" />
+    <Content Include="bin\MUPIS.pdb" />
+    <Content Include="bin\MUPIS.xml" />
+    <Content Include="Contenidos\css\bootstrap.css" />
+    <Content Include="Contenidos\css\bootstrap.min.css" />
+    <Content Include="Contenidos\css\estilo.css" />
+    <Content Include="Contenidos\Imagenes\101.png" />
+    <Content Include="Contenidos\Imagenes\candado01.png" />
+    <Content Include="Contenidos\Imagenes\led.png" />
+    <Content Include="Contenidos\Imagenes\logo.jpg" />
+    <Content Include="Contenidos\Imagenes\pantalla.png" />
+    <Content Include="Contenidos\Imagenes\Thơ-2.jpg" />
+    <Content Include="Contenidos\Imagenes\toamna.jpg" />
+    <Content Include="Contenidos\Imagenes\usuario01.png" />
+    <Content Include="Contenidos\Scripts\bootstrap.js" />
+    <Content Include="Contenidos\Scripts\bootstrap.min.js" />
+    <Content Include="Contenidos\Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Content\html5shiv.min.js" />
+    <Content Include="Content\Imagenes\1.jpg" />
+    <Content Include="Content\Imagenes\2.jpg" />
+    <Content Include="Content\Imagenes\Atras.png" />
+    <Content Include="Content\Imagenes\billboard.jpg" />
+    <Content Include="Content\Imagenes\cartelera.jpg" />
+    <Content Include="Content\Imagenes\Elimin.png" />
+    <Content Include="Content\Imagenes\empresa.jpg" />
+    <Content Include="Content\Imagenes\lo.png" />
+    <Content Include="Content\Imagenes\mapa.png" />
+    <Content Include="Content\Imagenes\mupiplaya.jpg" />
+    <Content Include="Content\Imagenes\mupiscalle.jpg" />
+    <Content Include="Content\Imagenes\pantalla.jpg" />
+    <Content Include="Content\Imagenes\pantallamastes.jpg" />
+    <Content Include="Content\Imagenes\paste9.jpg" />
+    <Content Include="Content\Imagenes\pastel1.jpg" />
+    <Content Include="Content\Imagenes\Primero.png" />
+    <Content Include="Content\Imagenes\seleccionar.png" />
+    <Content Include="Content\Imagenes\Siguiente.png" />
+    <Content Include="Content\Imagenes\Ultimo.png" />
+    <Content Include="Content\Imagenes\update.png" />
+    <Content Include="Content\Imagenes\user.png" />
+    <Content Include="Content\jfunciones.js" />
+    <Content Include="Content\jquery.inputmask.bundle.js" />
+    <Content Include="Content\jquery.numeric.js" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap-table.css" />
+    <Content Include="Content\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\plugins\bootstrap\js\bootbox.min.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap-filestyle.min.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap-modal-mult.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap-table.js" />
+    <Content Include="Content\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\plugins\bootstrap\js\npm.js" />
+    <Content Include="Content\plugins\dataformat\date.format.js" />
+    <Content Include="Content\plugins\datepicker\jquery.datetimepicker.full.min.js" />
+    <Content Include="Content\plugins\datepicker\jquery.datetimepicker.min.css" />
+    <Content Include="Content\plugins\datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Content\plugins\datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Content\plugins\fastclick\fastclick.min.js" />
+    <Content Include="Content\plugins\Grid\css\grid.css" />
+    <Content Include="Content\plugins\Grid\js\grid.js" />
+    <Content Include="Content\plugins\jQuery-Mask\jquery.mask.js" />
+    <Content Include="Content\plugins\jQuery\gmap3.min.js" />
+    <Content Include="Content\plugins\jQuery\jQuery-2.1.4.min.js" />
+    <Content Include="Content\plugins\select2\css\select2.css" />
+    <Content Include="Content\plugins\select2\css\select2.min.css" />
+    <Content Include="Content\plugins\select2\js\i18n\es.js" />
+    <Content Include="Content\plugins\select2\js\select2.full.js" />
+    <Content Include="Content\plugins\select2\js\select2.full.min.js" />
+    <Content Include="Content\plugins\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Content\plugins\smart wizard\css\smart_wizard.css" />
+    <Content Include="Content\plugins\smart wizard\css\smart_wizard_theme_arrows.css" />
+    <Content Include="Content\plugins\smart wizard\css\smart_wizard_theme_circles.css" />
+    <Content Include="Content\plugins\smart wizard\css\smart_wizard_theme_dots.css" />
+    <Content Include="Content\plugins\smart wizard\js\jquery.smartWizard.js" />
+    <Content Include="Content\plugins\toastmessage\javascript\jquery.toastmessage.js" />
+    <Content Include="Content\plugins\toastmessage\resources\css\jquery.toastmessage.css" />
+    <Content Include="Content\plugins\toastmessage\resources\images\close.gif" />
+    <Content Include="Content\plugins\toastmessage\resources\images\error.png" />
+    <Content Include="Content\plugins\toastmessage\resources\images\notice.png" />
+    <Content Include="Content\plugins\toastmessage\resources\images\success.png" />
+    <Content Include="Content\plugins\toastmessage\resources\images\warning.png" />
+    <Content Include="Content\plugins\validation\css\formValidation.css" />
+    <Content Include="Content\plugins\validation\css\formValidation.min.css" />
+    <Content Include="Content\plugins\validation\js\formValidation.js" />
+    <Content Include="Content\plugins\validation\js\formValidation.min.js" />
+    <Content Include="Content\plugins\validation\js\framework\bootstrap.js" />
+    <Content Include="Content\plugins\validation\js\framework\bootstrap.min.js" />
+    <Content Include="Content\plugins\validation\js\language\en_US.js" />
+    <Content Include="Content\plugins\validation\js\language\es_ES.js" />
+    <Content Include="Content\respond.min.js" />
+    <Content Include="Content\tema\css\AdminLTE.min.css" />
+    <Content Include="Content\tema\css\font-awesome.min.css" />
+    <Content Include="Content\tema\css\skins\skin-black-light.min.css" />
+    <Content Include="Content\tema\css\skins\skin-blue.min.css" />
+    <Content Include="Content\tema\css\skins\skin-green.min.css" />
+    <Content Include="Content\tema\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\tema\img\boxed-bg.jpg" />
+    <Content Include="Content\tema\js\app.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="home.aspx" />
+    <Content Include="lo.aspx" />
+    <Content Include="mantenimiento.aspx" />
+    <Content Include="modificaMantenimiento.aspx" />
+    <Content Include="mostrarMantenimientos.aspx" />
+    <Content Include="mostrarMedioPantalla.aspx" />
+    <Content Include="obj\Debug\MUPIS.dll" />
+    <Content Include="obj\Debug\MUPIS.pdb" />
+    <Content Include="obj\Debug\MUPIS.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MUPIS.xml" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="pantallas.aspx" />
+    <Content Include="Registrar Medio.aspx" />
+    <Content Include="todosLosMantenimiento.aspx" />
+    <Content Include="verLados.aspx" />
+    <Content Include="verPantalla.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acerca_de.aspx.designer.vb">
+      <DependentUpon>acerca_de.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="acerca_de.aspx.vb">
+      <DependentUpon>acerca_de.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="conexionBD.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.designer.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="lo.aspx.designer.vb">
+      <DependentUpon>lo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lo.aspx.vb">
+      <DependentUpon>lo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento.aspx.designer.vb">
+      <DependentUpon>mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento.aspx.vb">
+      <DependentUpon>mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="masterPage.Master.designer.vb">
+      <DependentUpon>masterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterPage.Master.vb">
+      <DependentUpon>masterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modificaMantenimiento.aspx.designer.vb">
+      <DependentUpon>modificaMantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modificaMantenimiento.aspx.vb">
+      <DependentUpon>modificaMantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="mostrarMantenimientos.aspx.designer.vb">
+      <DependentUpon>mostrarMantenimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mostrarMantenimientos.aspx.vb">
+      <DependentUpon>mostrarMantenimientos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="mostrarMedioPantalla.aspx.designer.vb">
+      <DependentUpon>mostrarMedioPantalla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mostrarMedioPantalla.aspx.vb">
+      <DependentUpon>mostrarMedioPantalla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pantallas.aspx.designer.vb">
+      <DependentUpon>pantallas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pantallas.aspx.vb">
+      <DependentUpon>pantallas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Registrar Medio.aspx.designer.vb">
+      <DependentUpon>Registrar Medio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar Medio.aspx.vb">
+      <DependentUpon>Registrar Medio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="todosLosMantenimiento.aspx.designer.vb">
+      <DependentUpon>todosLosMantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="todosLosMantenimiento.aspx.vb">
+      <DependentUpon>todosLosMantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verLados.aspx.designer.vb">
+      <DependentUpon>verLados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verLados.aspx.vb">
+      <DependentUpon>verLados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verPantalla.aspx.designer.vb">
+      <DependentUpon>verPantalla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verPantalla.aspx.vb">
+      <DependentUpon>verPantalla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\MUPIS.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="masterPage.Master" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\tema\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\tema\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\tema\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\tema\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\tema\fonts\FontAwesome.otf" />
+    <Content Include="bin\MUPIS.dll.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\ronald.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\MUPIS.vbproj.GenerateResource.Cache" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1331</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1331/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
