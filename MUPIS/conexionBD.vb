@@ -6,7 +6,7 @@ Public Class conexionBD
 
     Private MysqlCommand As New MySqlCommand
 
-    Dim MysqlConnString As String = "server=localhost; user id=root ;database=sql3221722; password=root"
+    Dim MysqlConnString As String = "Hostname=localhost; user id=root ;database=mupy; password=root"
     Public Conexion As MySqlConnection = New MySqlConnection(MysqlConnString)
 
     Function Consulta(ByRef consul As String) As Boolean
