@@ -15,7 +15,7 @@ Public Class home
         Dim lados As String
         Dim lados_total As String
         Dim markers As String = "["
-        Dim strConn As String = "server=localhost; user id=root ;database=sql3221722; password=root"
+        Dim strConn As String = "server=localhost;user id=root;database=mupy; password=root;"
         Dim cmd As New MySqlCommand("SELECT * FROM medio where tipo='Mupy'")
         Using conn As New MySqlConnection(strConn)
             cmd.Connection = conn
@@ -54,10 +54,10 @@ Public Class home
         Dim costo As Double = 0
 
         Dim id As String = ""
-        Dim MysqlConnString As String = "server=localhost; user id= root ; password=root"
+        Dim MysqlConnString As String = "server=localhost;user id=root;database=mupy; password=root;"
         Dim connection As MySqlConnection = New MySqlConnection(MysqlConnString)
         connection.Open()
-        Dim consu As String = "SELECT cantidad_lado as lado FROM sql3221722.mupy where medio_idMedio='" + idmedio + "';"
+        Dim consu As String = "SELECT cantidad_lado as lado FROM mupy.mupy where medio_idMedio='" + idmedio + "';"
         Dim cmd = New MySqlCommand(consu, connection)
         Dim dr As MySqlDataReader
         dr = cmd.ExecuteReader()
@@ -73,10 +73,10 @@ Public Class home
         Dim costo As Double = 0
 
         Dim id As String = ""
-        Dim MysqlConnString As String = "server=localhost; user id= root ; password=root"
+        Dim MysqlConnString As String = "server=localhost;user id=root;database=mupy; password=root;"
         Dim connection As MySqlConnection = New MySqlConnection(MysqlConnString)
         connection.Open()
-        Dim consu As String = "SELECT cantida_total as lado FROM sql3221722.mupy where medio_idMedio='" + idmedio + "';"
+        Dim consu As String = "SELECT cantida_total as lado FROM mupy.mupy where medio_idMedio='" + idmedio + "';"
         Dim cmd = New MySqlCommand(consu, connection)
         Dim dr As MySqlDataReader
         dr = cmd.ExecuteReader()

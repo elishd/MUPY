@@ -5,7 +5,7 @@ Imports System.Runtime.CompilerServices
 
 Public Class mantenimiento
     Inherits System.Web.UI.Page
-    Public MysqlConnString As String = "Hostname=localhost; user id= root ; password=root"
+    Public MysqlConnString As String = "server=localhost;user id=root;database=mupy; password=root;"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If Not IsPostBack Then

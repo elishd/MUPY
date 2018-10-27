@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class mostrarMantenimientos
     Inherits System.Web.UI.Page
-    Public MysqlConnString As String = "server=localhost; user id= root ; password=root"
+    Public MysqlConnString As String = "server=localhost;user id=root;database=mupy; password=root;"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             Me.fecha_mantenimiento.Text = Date.Today.ToString("yyyy-MM-dd")
@@ -20,10 +20,10 @@ Public Class mostrarMantenimientos
             Dim cmd = New MySqlCommand
             cmd = connectio.CreateCommand()
             cmd.CommandText = "SELECT idmantenimiento as id,DATE_FORMAT(fecha_mantenimiento , '%d/%m/%Y') as fecha,nombre_tecnico as tecnico, costo,tipo,estado, " +
-                      " (SELECT  GROUP_CONCAT(p.nombre) FROM sql3221722.mantenimiento_producto as mp " +
-                      " inner join sql3221722.producto as p on p.idProducto= mp.idProducto " +
+                      " (SELECT  GROUP_CONCAT(p.nombre) FROM mupy.mantenimiento_producto as mp " +
+                      " inner join mupy.producto as p on p.idProducto= mp.idProducto " +
                       " where mp.idmantenimiento = mantenimiento.idmantenimiento) as productos " +
-                      " FROM sql3221722.mantenimiento where medio_idmedio= '" + ide + "'  and (fecha_mantenimiento>= '" + fecha_mantenimiento.Text + "' and fecha_mantenimiento<= '" + fechaFin.Text + "');"
+                      " FROM mupy.mantenimiento where medio_idmedio= '" + ide + "'  and (fecha_mantenimiento>= '" + fecha_mantenimiento.Text + "' and fecha_mantenimiento<= '" + fechaFin.Text + "');"
             cmd.CommandType = System.Data.CommandType.Text
             GridMupis.DataSource = cmd.ExecuteReader()
             GridMupis.DataBind()

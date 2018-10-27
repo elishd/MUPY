@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class todosLosMantenimiento
     Inherits System.Web.UI.Page
-    Public MysqlConnString As String = "server=localhost; user id= root ; password=root"
+    Public MysqlConnString As String = "server=localhost;user id=root;database=mupy; password=root;"
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
@@ -17,11 +17,11 @@ Public Class todosLosMantenimiento
             cmd = connectio.CreateCommand()
             cmd.CommandText = "SELECT man.idmantenimiento as id,DATE_FORMAT(man.fecha_mantenimiento , '%d/%m/%Y') as fecha,man.nombre_tecnico as tecnico,man.costo,man.tipo," +
                        " man.estado,medi.ubicacion as ubicacionmedio,medi.tipo as tipomedio, " +
-                       "(SELECT  GROUP_CONCAT(p.nombre) FROM sql3221722.mantenimiento_producto as mp " +
-                      " inner join sql3221722.producto as p on p.idProducto= mp.idProducto " +
+                       "(SELECT  GROUP_CONCAT(p.nombre) FROM mupy.mantenimiento_producto as mp " +
+                      " inner join mupy.producto as p on p.idProducto= mp.idProducto " +
                       "where mp.idmantenimiento = man.idmantenimiento) as productos " +
-                      " FROM sql3221722.mantenimiento as man " +
-                      "inner join sql3221722.medio  as medi on medi.idMedio = man.medio_idmedio " +
+                      " FROM mupy.mantenimiento as man " +
+                      "inner join mupy.medio  as medi on medi.idMedio = man.medio_idmedio " +
                       "where man.tipo= '" + DropDownList3.SelectedValue + "'  and man.estado= '" + estado.SelectedValue + "' " +
                       "and (man.fecha_mantenimiento>= '" + fecha_mantenimiento.Text + "' and man.fecha_mantenimiento<= '" + fechaFin.Text + "');"
             cmd.CommandType = System.Data.CommandType.Text
@@ -40,10 +40,10 @@ Public Class todosLosMantenimiento
         Dim cmd = New MySqlCommand
         cmd = connection.CreateCommand()
         cmd.CommandText = "SELECT idmantenimiento as id,DATE_FORMAT(fecha_mantenimiento , '%d-%m-%Y') as fecha,nombre_tecnico as tecnico, costo,tipo,estado, " +
-                  " (SELECT  GROUP_CONCAT(p.nombre) FROM sql3221722.mantenimiento_producto as mp " +
-                  " inner join sql3221722.producto as p on p.idProducto= mp.idProducto " +
+                  " (SELECT  GROUP_CONCAT(p.nombre) FROM mupy.mantenimiento_producto as mp " +
+                  " inner join mupy.producto as p on p.idProducto= mp.idProducto " +
                   " where mp.idmantenimiento = mantenimiento.idmantenimiento) as productos " +
-                  " FROM sql3221722.mantenimiento where tipo= '" + DropDownList3.SelectedValue + "' and estado= '" + estado.SelectedValue + "' and (fecha_mantenimiento>= '" +
+                  " FROM mupy.mantenimiento where tipo= '" + DropDownList3.SelectedValue + "' and estado= '" + estado.SelectedValue + "' and (fecha_mantenimiento>= '" +
                   fecha_mantenimiento.Text + "' and fecha_mantenimiento<= '" + fechaFin.Text + "');"
         cmd.CommandType = System.Data.CommandType.Text
         GridMupis.DataSource = cmd.ExecuteReader()
