@@ -75,7 +75,7 @@
                               <asp:ListItem>Selecionar</asp:ListItem>
                               <asp:ListItem>Mupy</asp:ListItem>
                               <asp:ListItem>Pantalla</asp:ListItem>
-                              <asp:ListItem>Acroly</asp:ListItem>
+                            
                           </asp:DropDownList>
                                              
                     </div>

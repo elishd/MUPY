@@ -100,17 +100,17 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
-             <asp:TemplateField HeaderText="Ubicacion" ItemStyle-HorizontalAlign="Center">
+             <%--<asp:TemplateField HeaderText="Ubicacion" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:Label ID="ubicacion" runat="server" Text='<%# Eval("ubicacionmedio")%>' />
                 </ItemTemplate>
-            </asp:TemplateField>
+            </asp:TemplateField>--%>
 
-             <asp:TemplateField HeaderText="Tipo de medio" ItemStyle-HorizontalAlign="Center">
+            <%-- <asp:TemplateField HeaderText="Tipo de medio" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:Label ID="tipoMedio" runat="server" Text='<%# Eval("tipomedio")%>' />
                 </ItemTemplate>
-            </asp:TemplateField>
+            </asp:TemplateField>--%>
 
             <asp:ButtonField ButtonType="Image" Text="Actualizar" CommandName="Update" HeaderText="Editar" ShowHeader="True" ImageUrl="~/Content/Imagenes/update.png" ItemStyle-HorizontalAlign="Center">
                 <ControlStyle Height="20px" Width="25px" />
